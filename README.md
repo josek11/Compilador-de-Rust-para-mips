@@ -1,8 +1,8 @@
 # Compilador-de-Rust-para-mips
 Trabalho desenvolvido por:
-  Henrique Barreira  up201505357
-  José Barata  	   up201503334
-
+  José Barata
+  Henrique Barreira
+  
 Testar o Compilador:
 
 -Compilar todos os ficheiros com Comando : "make clean all"
