@@ -1,6 +1,6 @@
 # Compilador-de-Rust-para-mips
 Trabalho desenvolvido por:
-  José Barata
+  José Barata, 
   Henrique Barreira
   
 Testar o Compilador:
