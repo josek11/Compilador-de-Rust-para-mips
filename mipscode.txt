@@ -1,0 +1,108 @@
+.data
+	x:		.space 4
+	y:		.space 4
+	t:		.space 4
+	k:		.space 4
+	v:		.space 4
+	f:		.space 4
+	as:		.space 4
+	g:		.space 4
+.text
+	lw	$t1,	y
+	li	$t2,	2
+	li	$t3,	5
+	mul	$t4,	$t2,	$t3
+	sub	$t5,	$t1,	$t4
+	sw	$s37,	x
+	lw	$t6,	x
+	li	$t7,	2
+	mul	$t8,	$t6,	$t7
+	sw	$s38,	y
+
+label3:
+	lw	$t9,	x
+	li	$s1,	4
+	sub	$s2,	$t9,	$s1
+	blt	$s2,	($zero),	label1 
+
+label1:
+	li	$s3,	4
+	li	$s4,	4
+	sw	$s39,	t
+
+label2:
+	li	$s6,	4
+	li	$s7,	2
+	add	$s8,	$s6,	$s7
+	sw	$s40,	k
+	li	$s9,	4
+	li	$s10,	5
+	div	$s11,	$s9,	$s10
+	sw	$s41,	v
+
+label6:
+	lw	$s12,	x
+	li	$s13,	4
+	sub	$s14,	$s12,	$s13
+	bgt	$s14,	($zero),	label4 
+
+label4:
+
+label9:
+	lw	$s15,	x
+	li	$s16,	4
+	sub	$s17,	$s15,	$s16
+	bne	$s17,	($zero),	label7 
+
+label7:
+
+label12:
+	lw	$s18,	mambo
+	li	$s19,	3
+	sub	$s20,	$s18,	$s19
+	bge	$s20,	($zero),	label10 
+
+label10:
+	j	label12
+
+label11:
+	li	$s21,	3
+	sw	$s42,	f
+
+label8:
+	li	$s22,	4
+	li	$s23,	4
+	mul	$s24,	$s22,	$s23
+	sw	$s43,	as
+	j	label6
+
+label5:
+
+label15:
+	lw	$s25,	ba
+	li	$s26,	3
+	sub	$s27,	$s25,	$s26
+	bne	$s27,	($zero),	label13 
+
+label13:
+
+label18:
+	lw	$s28,	z
+	li	$s29,	1
+	sub	$s30,	$s28,	$s29
+	beq	$s30,	($zero),	label16 
+
+label16:
+	li	$s31,	3
+	li	$s32,	3
+	add	$s33,	$s31,	$s32
+	sw	$s44,	x
+
+label17:
+	li	$s34,	3
+	li	$s35,	4
+	sw	$s45,	g
+
+label14:
+	li	$v0,	10
+	syscall
